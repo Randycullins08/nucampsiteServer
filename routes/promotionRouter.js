@@ -56,7 +56,7 @@ promotionRouter
     );
   })
   .put((req, res, next) => {
-    Promotion.findOneAndUpdate(
+    Promotion.findByIdAndUpdate(
       req.params.promotionId,
       {
         $set: req.body,
