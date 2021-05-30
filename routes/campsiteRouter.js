@@ -139,7 +139,7 @@ campsiteRouter
   })
   .delete(
     authenticate.verifyUser,
-    authienticate.verifyAdmin,
+    authenticate.verifyAdmin,
     (req, res, next) => {
       Campsite.findById(req.params.campsiteId)
         .then((campsite) => {
